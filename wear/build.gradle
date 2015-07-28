@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+android {
+    signingConfigs {
+        config {
+            keyAlias 'androiddebug'
+            keyPassword 'android'
+            storeFile file('C:/Users/furballadmin/.android/debug.keystore')
+            storePassword 'android'
+        }
+    }
+    compileSdkVersion 22
+    buildToolsVersion '23.0.0 rc3'
+    packagingOptions {
+
+    }
+    defaultConfig {
+        applicationId "com.furballwear.apps.pugrz"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
+        }
+        debug {
+            debuggable true
+            jniDebuggable false
+            renderscriptDebuggable false
+            minifyEnabled false
+            pseudoLocalesEnabled true
+            zipAlignEnabled true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    productFlavors {
+    }
+}
+dependencies {
+    compile 'com.google.android.gms:play-services-location:7.5.0'
+    compile 'com.google.android.gms:play-services-wearable:7.5.0'
+    compile 'com.android.support:support-v13:22.2.1'
+    compile 'com.google.android.support:wearable:1.2.0'
+    compile project(':Shared')
+}
+
+repositories {
+    jcenter()
+}

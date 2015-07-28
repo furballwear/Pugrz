@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="NewApi">
+        <ignore path="src/com/furballwear/apps/pugrz/activities/BaseActivity.java" />
+        <ignore path="src/com/furballwear/apps/pugrz/activities/LoginActivity.java" />
+        <ignore path="src/com/furballwear/apps/pugrz/activities/MainActivity.java" />
+        <ignore path="src/com/furballwear/apps/pugrz/activities/SplashActivity.java" />
+        <ignore path="src/com/furballwear/apps/pugrz/activities/Splash_activity.java" />
+    </issue>
+</lint>

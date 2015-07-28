@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2015 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+
+  <color name="login_button">#FDAB4F</color>
+  <color name="chat_me">#86D9FF</color>
+  <color name="chat_1">#FFC486</color>
+  <color name="chat_2">#FFC586</color>
+  <color name="chat_3">#CAECA2</color>
+  <color name="chat_4">#6CE8EF</color>
+  <color name="chat_5">#FFB5C8</color>
+  <color name="chat_6">#E6B5FF</color>
+
+  <color name="blue">#0d91b7</color>
+  <color name="orange">#ffffcc44</color>
+  <color name="yellow">#fff3ff59</color>
+  <color name="accent_color">@color/blue</color>
+  <color name="colorPrimary">@color/blue</color>
+  <color name="colorPrimaryDark">@color/blue</color>
+  <color name="statusBarColor">@color/blue</color>
+  <color name="navigationBarColor">@android:color/black</color>
+  <color name="drawerArrowColor">@android:color/white</color>
+
+  <color name="viewpager_color">#456755</color>
+  <color name="text_background">#90000000</color>
+  <color name="transparent_actionbar_background">#22000000</color>
+  <color name="lighter_gray">#ddd</color>
+  <color name="red">#ffff333b</color>
+
+
+
+  <color name="green_teal">#009688</color>
+  <color name="purple">#673AB7</color>
+
+  <color name="cyan">#00BCD4</color>
+  <color name="lime">#CDDC39</color>
+
+
+
+
+  <color name="green">#ff1b42ff</color>
+
+  <color name="window_background">#0d91b7</color>
+  <color name="list_bg_1">#6effb9</color>
+  <color name="list_bg_2">#2855ff</color>
+</resources>

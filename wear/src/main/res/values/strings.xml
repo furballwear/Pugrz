@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Pugrz</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
+    <string name="action_explore">Explore</string>
+    <string name="action_navigate">Start walking navigation</string>
+    <string name="action_open">Open on phone</string>
+    <string name="exit_intro_text">Long-press anywhere to exit</string>
+    <string name="map_caption">%s away</string>
+    <string name="action_open_checkin">Checkin to Event</string>
+    <plurals name="attractions_found">
+        <item quantity="one">One tourist attraction nearby!</item>
+        <item quantity="other">%d tourist attractions nearby!</item>
+    </plurals>
+    <string name="title_activity_checkin">CheckinActivity</string>
+</resources>

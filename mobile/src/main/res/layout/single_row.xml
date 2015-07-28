@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:src="@drawable/ic_pugrz"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/eventimageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_alignParentStart="false"
+    android:layout_toRightOf="@+id/eventimageView">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+
+        android:text="Large Text"
+        android:id="@+id/text1"
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+
+        android:text="Small Text"
+        android:id="@+id/text2" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+
+        android:text="Small Text"
+        android:id="@+id/text3"/>
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="25dp"
+
+    android:text="Small Text"
+    android:id="@+id/text4"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+
+        android:text="Small Text"
+        android:id="@+id/text5"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+
+        android:text="Small Text"
+        android:id="@+id/text6"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+
+        android:text="Small Text"
+        android:id="@+id/text7"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+
+        android:text="Small Text"
+        android:id="@+id/text8"/>
+</LinearLayout>
+
+</RelativeLayout>

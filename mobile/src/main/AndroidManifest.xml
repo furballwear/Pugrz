@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.furballwear.apps.pugrz" >
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND" />
+
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <!-- Required to enable our SyncAdapter after it's created. -->
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <!-- Required because we're manually creating a new account. -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+
+
+    <permission
+        android:name="com.furballwear.apps.pugrz.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.furballwear.apps.pugrz.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:maxSdkVersion="22"/>
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <receiver
+            android:name="com.magnet.mmx.client.MMXGcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.furballwear.apps.pugrz" />
+            </intent-filter>
+        </receiver>
+
+
+        <meta-data
+            android:name="com.google.android.gms.games.APP_ID"
+            android:value="@string/app_id" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:uiOptions="splitActionBarWhenNarrow" >
+        </activity>
+        <activity
+            android:name=".activities.GameActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.ChooseFileDemoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.ChooseDemoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.RemoteFileDemo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.UploadFileDemo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.DetailActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".activities.MainActivity" >
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_maps_key" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity android:name=".activities.AttractionListActivity" />
+        <activity
+            android:name=".activities.Profile"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName=".activities.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+
+        <receiver android:name=".service.UtilityReceiver" />
+
+        <service android:name=".service.UtilityService" />
+        <service android:name=".service.ListenerService" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".activities.EventPost" >
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_maps_key" />
+        </activity>
+        <activity android:name=".activities.FreindsActivity" />
+        <activity
+            android:name=".activities.AccountCreate"
+            android:label="@string/title_activity_account_create"
+            android:parentActivityName=".activities.LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".activities.CheeseDetailActivity"
+            android:parentActivityName=".activities.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.furballwear.apps.pugrz.activities.MainActivity" />
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_maps_key" />
+        </activity>
+        <activity
+            android:name=".message.MyActivity"
+            android:parentActivityName=".activities.DetailActivity" />
+        <activity android:name=".message.TopicListActivity" />
+        <activity android:name=".message.TopicAddActivity" />
+        <activity android:name=".message.PugrzChatActivity" />
+        <activity android:name=".message.LoginActivity" />
+        <activity android:name=".message.TopicItemListActivity" />
+        <activity
+            android:name=".activities.FriendsList"
+            android:label="@string/title_activity_friends_list" >
+        </activity>
+        <activity
+            android:name=".message.GooglePlayServicesActivity"
+            android:label="@string/title_activity_google_play_services" >
+        </activity>
+        <activity
+            android:name="com.furballwear.apps.pugrz.basicsyncadapter.EntryListActivity"
+            android:label="@string/app_name" />
+        <provider
+            android:name="com.furballwear.apps.pugrz.basicsyncadapter.provider.FeedProvider"
+            android:authorities="com.furballwear.apps.pugrz.basicsyncadapter"
+            android:exported="false" />
+
+        <!-- This service implements our SyncAdapter. It needs to be exported, so that the system
+        sync framework can access it. -->
+        <service android:name="com.furballwear.apps.pugrz.basicsyncadapter.SyncService"
+            android:exported="true">
+            <!-- This intent filter is required. It allows the system to launch our sync service
+            as needed. -->
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <!-- This points to a required XML file which describes our SyncAdapter. -->
+            <meta-data android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+
+        <!-- This implements the account we'll use as an attachment point for our SyncAdapter. Since
+        our SyncAdapter doesn't need to authenticate the current user (it just fetches a public RSS
+        feed), this account's implementation is largely empty.
+
+        It's also possible to attach a SyncAdapter to an existing account provided by another
+        package. In that case, this element could be omitted here. -->
+        <service android:name="com.furballwear.apps.pugrz.common.accounts.GenericAccountService">
+            <!-- Required filter used by the system to launch our account service. -->
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <!-- This points to an XMLf ile which describes our account service. -->
+            <meta-data android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+    </application>
+
+</manifest>

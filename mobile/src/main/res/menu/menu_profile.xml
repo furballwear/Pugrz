@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.furballwear.apps.pugrz.activities.Profile">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+    android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/logout" android:title="logout"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/todo" android:title="todo"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/remotefile" android:title="remote file"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/att" android:title="Attraction"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/test_microapp" android:title="Micro APP"
+        android:orderInCategory="800" app:showAsAction="ifRoom"/>
+</menu>

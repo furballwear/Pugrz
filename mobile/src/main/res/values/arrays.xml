@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gametype">
+        <item>Select Game Type</item>
+        <item>BOARD GAMES</item>
+        <item>CARD GAMES</item>
+        <item>TABLETOP</item>
+        <item>PEN N PAPER</item>
+        <item>FURBALLWEAR</item>
+
+    </string-array>
+
+    <string-array name="gamestyle">
+        <item>Select Game style</item>
+        <item>Open Public</item>
+        <item>Private parsonal</item>
+        <item>Tornament</item>
+        <item>Hosted Event</item>
+        <item>Furballwears Secert</item>
+
+    </string-array>
+    <string-array name="descriptions">
+        <item>PUGRZ</item>
+        <item>BOARD GAMES</item>
+        <item>CARD GAMES</item>
+        <item>TABLETOP</item>
+        <item>PEN N PAPER</item>
+        <item>PUGRZ</item>
+        <item>PUGRZ</item>
+        <item>BOARD GAMES</item>
+        <item>CARD GAMES</item>
+        <item>TABLETOP</item>
+        <item>PEN N PAPER</item>
+        <item>PUGRZ</item>
+    </string-array>
+</resources>

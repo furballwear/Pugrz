@@ -1,0 +1,11 @@
+<resources>
+    <string-array name="android_wear_capabilities" translatable="false">
+        <!-- declaring that phone has the capability to show details -->
+        <item>@string/show_detail_capability_name</item>
+        <item>@string/checkin</item>
+        <item>@string/localevents</item>
+    </string-array>
+    <string name="show_detail_capability_name">Show On Phone For Mor Detail</string>
+    <string name="localevents">There are Pugrz Events</string>
+</resources>
+
